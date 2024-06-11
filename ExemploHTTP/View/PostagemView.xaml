@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExemploHTTP.View.PostagemView"
              Title="PostagemView">
+    <ScrollView>
     <VerticalStackLayout>
 
         <CollectionView ItemsSource="{Binding Postagens}" EmptyView="Não tem os Dados" >
@@ -24,9 +25,10 @@
                                      Text="{Binding UserId}"/>
                                     
                         </HorizontalStackLayout>
-                                <BoxView BackgroundColor="DarkSlateGray"
-                                         HeightRequest="6"
-                                         CornerRadius="50"/>
+                                <BoxView 
+                                    BackgroundColor="DarkSlateGray"
+                                    HeightRequest="6"
+                                    CornerRadius="50"/>
                                 <HorizontalStackLayout>
                             <Label
                                     Text="TITLE: "
@@ -55,4 +57,5 @@
             WidthRequest="160"
             Command="{Binding GetPostagensAsyncCommand}"/>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
